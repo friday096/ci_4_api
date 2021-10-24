@@ -18,7 +18,9 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
+// $routes->setDefaultController('Apicontroller');
 $routes->setDefaultMethod('index');
+// $routes->setDefaultMethod('insert_form_data');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -34,6 +36,18 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/form', 'Apicontroller::index');
+$route['Apicontroller'] = 'Apicontroller';
+
+
+// $routes->resource('api');
+// $routes->group('api', function($routes){
+
+
+//     $routes->get('/test', 'Apicontroller::hello');
+
+
+// });
+
 
 
 /*
